@@ -177,3 +177,16 @@ $>dotnet run
 
 * Seperate NPM module
 | $> npm install --save webpack-hot-middleware
+
+## Installing ASP.NET Core with React and Redux
+
+```bash
+$> dotnet new reactredux
+```
+
+Once the installation is completed, run the following command:
+```bash
+$> npm install
+```
+
+* Add the Redux DevTools in Chrome browser
