@@ -36,4 +36,25 @@ Examples:
     dotnet new --help
 
 C:\Projects\aspnet-core-spa>
+```
+
+## Alternative: Creating a SPA via Yeoman
+
 ```bash
+C:\Projects\aspnet-core-spa>npm install -g yo generator-aspnetcore-spa
+```
+
+### Installing templates via yo
+
+```bash
+$>yo aspnetcore-spa
+```
+
+Note: Yeoman is now deprecated and no longer maintained after the release of dotnet core 2.0
+
+## Install the SPA framework
+
+Create a new folder, C:\Projects\aspnet-core-spa\aspnet-core-angular> and run the following command
+```bash
+$>dotnet new angular
+```
