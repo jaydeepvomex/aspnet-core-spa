@@ -1,6 +1,8 @@
 # Building ASP.NET Core to build Single-Page Applications
 
-## Installing the Templates for .NET cli
+## Getting Started
+
+### Installing the Templates for .NET cli
 
 Create a new folder in C:\Project\aspnet-core-spa and install the templates
 
@@ -38,7 +40,7 @@ Examples:
 C:\Projects\aspnet-core-spa>
 ```
 
-## Alternative: Creating a SPA via Yeoman
+### Alternative: Creating a SPA via Yeoman
 
 ```bash
 C:\Projects\aspnet-core-spa>npm install -g yo generator-aspnetcore-spa
@@ -52,7 +54,7 @@ $>yo aspnetcore-spa
 
 Note: Yeoman is now deprecated and no longer maintained after the release of dotnet core 2.0
 
-## Install the SPA framework
+### Install the SPA framework
 
 Create a new folder, C:\Projects\aspnet-core-spa\aspnet-core-angular> and run the following command
 ```bash
@@ -73,4 +75,47 @@ After the installation is complete, run the application using:
 
 ```bash
 C:\Projects\aspnet-core-spa\aspnet-core-angular>dotnet run
+```
+
+## Streamling the Dev Experience
+
+### Webpack Dev Middleware
+
+* Don't have to run webpack manually
+* Browser received up-to-date build output
+* Build artifacts server instantly
+* An instance of webpack stays active and has partial compilation states pre-cached in memory
+
+### Setting up ASP.NET core in Dev Mode with Environment Variable
+
+If you're using PowerShell then go to the folder
+```bash
+C:\Projects\ps\aspnet-core-spa\aspnet-core-angular>$Env:ASPNETCORE_ENVIRONMENT = "Development"
+```
+
+or use this:
+
+```bash
+C:\Projects\ps\aspnet-core-spa>setx ASPNETCORE_ENVIRONMENT "Development"
+```
+will result in:
+
+```md
+C:\Projects\ps\aspnet-core-spa>setx ASPNETCORE_ENVIRONMENT "Development"
+
+SUCCESS: Specified value was saved.
+
+C:\Projects\aspnet-core-spa>
+```
+
+You can verify by using:
+
+```bash
+C:\Projects\ps\aspnet-core-spa>echo ASPNETCORE_ENVIRONMENT=Development
+ASPNETCORE_ENVIRONMENT=Development
+```
+
+```bash
+C:\Projects\ps\aspnet-core-spa>echo %ASPNETCORE_ENVIRONMENT%
+Development
 ```
