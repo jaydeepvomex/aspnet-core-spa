@@ -81,6 +81,7 @@ C:\Projects\aspnet-core-spa\aspnet-core-angular>dotnet run
 
 ### Webpack Dev Middleware
 
+* Webpack helps to bundle your scripts/images/styles/assets, modules with dependencies are bundled into static assets
 * Don't have to run webpack manually
 * Browser received up-to-date build output
 * Build artifacts server instantly
@@ -119,3 +120,60 @@ ASPNETCORE_ENVIRONMENT=Development
 C:\Projects\ps\aspnet-core-spa>echo %ASPNETCORE_ENVIRONMENT%
 Development
 ```
+
+Make sure to install the latest verson of Webpack
+
+```bash
+$>npm install webpack@latest
+```
+
+Then
+```bash
+C:\Projects\aspnet-core-spa\aspnet-core-angular>webpack
+(node:24748) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+Hash: 54fd112c01670d37adbee65c551dc6efd2add5b3
+Version: webpack 4.16.0
+Child
+    Hash: 54fd112c01670d37adbe
+    Time: 10784ms
+    Built at: 2018-07-13 13:37:56
+                 Asset      Size  Chunks             Chunk Names
+        main-client.js  22.5 KiB       0  [emitted]  main-client
+    main-client.js.map  89.4 KiB       0  [emitted]  main-client
+
+    WARNING in configuration
+    The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+    You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/concepts/mode/
+Child
+    Hash: e65c551dc6efd2add5b3
+    Time: 16489ms
+    Built at: 2018-07-13 13:38:02
+             Asset      Size  Chunks             Chunk Names
+    main-server.js  1.61 MiB       0  [emitted]  main-server
+
+    WARNING in configuration
+    The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+    You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/concepts/mode/
+
+C:\Projects\aspnet-core-spa\aspnet-core-angular>
+```
+
+Build the project:
+
+```bash
+$>dotnet build
+```
+
+Run the project:
+
+```bash
+$>dotnet run
+```
+
+### Hot Module Replacement
+
+* Watches for any changes to source files
+| -.ts / .html / .sass
+
+* Seperate NPM module
+| $> npm install --save webpack-hot-middleware
