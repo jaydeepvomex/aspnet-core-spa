@@ -58,3 +58,19 @@ Create a new folder, C:\Projects\aspnet-core-spa\aspnet-core-angular> and run th
 ```bash
 $>dotnet new angular
 ```
+
+Then go to the directory and run
+
+```bash
+C:\Projects\aspnet-core-spa\aspnet-core-angular>dotnet restore
+```
+
+```bash
+C:\Projects\aspnet-core-spa\aspnet-core-angular>npm install
+```
+
+After the installation is complete, run the application using: 
+
+```bash
+C:\Projects\aspnet-core-spa\aspnet-core-angular>dotnet run
+```
