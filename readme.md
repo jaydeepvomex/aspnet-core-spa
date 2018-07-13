@@ -190,3 +190,17 @@ $> npm install
 ```
 
 * Add the Redux DevTools in Chrome browser
+
+## Help with Routing
+
+### Add Microsoft.DotNet.Watcher.Tools to csproj file
+
+```csharp
+<ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
+</ItemGroup>
+```
+Use the following command to run the app:
+```bash
+$>dotnet watch run
+```
